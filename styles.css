@@ -132,3 +132,21 @@ footer{
   .hero h2{ font-size: 22px; }
   .main-nav ul{ gap: 12px; padding: 8px 6px; }
 }
+/* ----- Estilos para el menú activo ----- */
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+.main-nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main-nav ul li a.active {
+  background: white;
+  color: #003366; /* azul oscuro de tu diseño */
+  font-weight: bold;
+}
