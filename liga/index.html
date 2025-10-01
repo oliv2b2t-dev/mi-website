@@ -1,1 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liga — AFAHAX</title>
 
+  <!-- CSS global (reutiliza tu styles.css) -->
+  <link rel="stylesheet" href="/mi-website/styles.css">
+
+  <!-- CSS específico de la sección Liga -->
+  <link rel="stylesheet" href="/mi-website/liga/liga.css">
+
+  <!-- Font Awesome (opcional para iconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header (reutiliza el mismo look) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/mi-website/"><img src="/mi-website/assets/logo-left.png" alt="Escudo AFAHAX" class="logo logo-left"></a>
+      <h1 class="site-title">ASOCIACION DE FUTBOL ARGENTINO</h1>
+      <a href="/mi-website/"><img src="/mi-website/assets/logo-right.png" alt="Escudo AFAHAX" class="logo logo-right"></a>
+    </div>
+  </header>
+
+  <!-- Barra superior de navegación (igual que en el resto del sitio) -->
+  <nav class="main-nav" role="navigation" aria-label="Menú principal">
+    <ul>
+      <li><a href="/mi-website/clubes">Clubes</a></li>
+      <li><a href="/mi-website/liga">Liga | Copas</a></li>
+      <li><a href="/mi-website/redes">Redes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Wrapper: sidebar izquierda + contenido principal -->
+  <div class="content-wrapper">
+    <!-- SIDEBAR fijo entre header/nav y footer -->
+    <aside class="sidebar" aria-label="Navegación de temporadas">
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <button class="accordion" aria-expanded="false">› Temporada 1</button>
+            <ul class="submenu">
+              <li><a href="/mi-website/liga/primeradivision/">Primera Division</a></li>
+              <li><a href="/mi-website/liga/apertura/">Apertura</a></li>
+              <li><a href="/mi-website/liga/clausura/">Clausura</a></li>
+              <li><a href="/mi-website/liga/sudamericana/">Sudamericana</a></li>
+              <li><a href="/mi-website/liga/libertadores/">Libertadores</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <button class="accordion" aria-expanded="false">› Temporada 2</button>
+            <ul class="submenu">
+              <li><a href="/mi-website/liga/primeradivision/">Primera Division</a></li>
+              <li><a href="/mi-website/liga/apertura/">Apertura</a></li>
+              <li><a href="/mi-website/liga/clausura/">Clausura</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- MAIN: área principal -->
+    <main class="liga-main">
+      <section class="hero">
+        <h2>Temporada 2 en curso!</h2>
+        <p class="lead">¡Revisa las categorías de la izquierda para ver las temporadas!</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    © 2025 AFAHAX - Creado por !Chaeyoung
+  </footer>
+
+  <!-- Script para el menú desplegable -->
+  <script src="/mi-website/liga/liga.js" defer></script>
+</body>
+</html>
