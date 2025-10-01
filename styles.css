@@ -1,32 +1,99 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a3d91; /* Fondo azul oscuro */
+  color: white;
+  text-align: center;
+}
+
+/* Encabezado */
 header {
-  background: #333;
-  color: #fff;
-  padding: 10px;
+  background-color: white;
+  color: #0a3d91;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-header nav a {
-  color: #fff;
-  margin: 0 15px;
+header h1 {
+  font-size: 24px;
+  margin: 0;
+  flex: 1 1 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+/* Barra de navegación */
+nav {
+  background-color: #082b66; /* Azul más oscuro */
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
   text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
-header nav a:hover {
-  text-decoration: underline;
+nav ul li a:hover {
+  color: #ffdd00; /* Amarillo al pasar el mouse */
 }
 
-section {
+/* Contenido principal */
+main {
   padding: 40px 20px;
 }
 
+main h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+main p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Footer */
 footer {
-  text-align: center;
-  background: #f0f0f0;
-  padding: 20px;
+  background-color: #082b66;
+  padding: 15px 10px;
+  font-size: 14px;
+  color: #ddd;
 }
