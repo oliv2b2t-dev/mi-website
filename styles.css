@@ -1,89 +1,132 @@
-/* Reset some default margins and paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* reset y variables */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --blue-main: #0a3d91;
+  --blue-dark: #002c77;
+  --accent: #9bd1ff; /* color hover celeste claro */
+  --text-light: #ffffff;
+  --footer-text: #ddd;
 }
 
-/* HEADER */
-header {
-    background-color: white;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 70px;
-    padding: 0 20px;
+html, body { height: 100%; }
+body{
+  font-family: "Arial", sans-serif;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--blue-main);
 }
 
-/* Logo aligned left */
-header img {
-    flex-shrink: 0;
+/* HEADER: fondo blanco DE LADO A LADO, contenido centrado con flexbox
+   usamos .header-inner en position:relative y logos absolute para que
+   el título quede realmente centrado. */
+.site-header{
+  width: 100%;
+  background: #fff;
+}
+.header-inner{
+  position: relative;
+  height: 88px; /* alto del header - ajustar si querés */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* título centrado */
+  padding: 8px 20px;
+}
+.site-title{
+  color: var(--blue-main);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+}
+.logo{
+  height: 56px;
+  width: auto;
+  display: block;
+}
+/* logos posicionados a los costados sin empujar el título */
+.logo-left{
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logo-right{
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* Title centered horizontally in the header */
-header h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
-    font-weight: bold;
-    white-space: nowrap;
+/* NAV: barra azul oscuro de ancho completo */
+.main-nav{
+  width: 100%;
+  background: var(--blue-dark);
+}
+.main-nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 10px 12px;
+  margin: 0;
+}
+.main-nav a{
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 6px 8px;
+  display: inline-block;
+}
+.main-nav a:hover{
+  color: var(--accent);
 }
 
-/* NAVIGATION */
-nav {
-    background-color: #002c77;
-    width: 100%;
+/* MAIN: que ocupe el espacio disponible vertical */
+main{
+  flex: 1 0 auto; /* rellena el alto restante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: var(--blue-main);
+}
+.hero{
+  text-align: center;
+  max-width: 900px;
+}
+.hero h2{
+  font-size: 36px;
+  margin-bottom: 14px;
+  font-weight: 800;
+}
+.hero .lead{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.hero .small-note{
+  font-size: 15px;
+  opacity: 0.95;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 10px 0;
+/* FOOTER: ancho completo */
+footer{
+  width: 100%;
+  background: var(--blue-dark);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 14px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-nav a:hover,
-nav a:focus {
-    color: #7ec8e3; /* celeste claro */
-}
-
-/* MAIN CONTENT */
-main {
-    background-color: #0a3d91;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-main h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-}
-
-main p {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.5;
-}
-
-/* FOOTER */
-footer {
-    background-color: #002c77;
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    width: 100%;
-    font-size: 0.9rem;
+/* responsive */
+@media (max-width: 720px){
+  .header-inner{ height: 72px; padding: 8px 12px; }
+  .logo{ height: 46px; }
+  .site-title{ font-size: 18px; }
+  .hero h2{ font-size: 22px; }
+  .main-nav ul{ gap: 12px; padding: 8px 6px; }
 }
