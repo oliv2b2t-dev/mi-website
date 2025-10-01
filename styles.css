@@ -1,126 +1,97 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ASOCIACION DE FUTBOL ARGENTINO - AFAHAX</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #004294; /* azul fondo principal */
-            color: white;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: white;
-            padding: 10px 20px;
-        }
-        .header-text {
-            text-align: center;
-            flex-grow: 1;
-            color: #004294;
-        }
-        .header-text h1 {
-            margin: 0;
-            font-weight: bold;
-            font-size: 32px;
-        }
-        .header-text h2 {
-            margin: 0;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        .logo {
-            width: 70px;
-            height: auto;
-        }
-        nav {
-            background-color: #012e66; /* azul barra nav */
-            padding: 10px 40px;
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
-            display: flex;
-            justify-content: flex-end;
-            gap: 20px;
-            align-items: center;
-        }
-        nav span {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        nav span.redes {
-            color: #64a0cd;
-            font-weight: bolder;
-        }
-        main {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        main h1 {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        main p.main-text {
-            font-size: 22px;
-            font-weight: bold;
-            line-height: 1.4;
-            max-width: 600px;
-            margin: 0 auto 60px auto;
-        }
-        main p.info {
-            font-size: 16px;
-            font-weight: normal;
-            margin-top: 80px;
-        }
-        footer {
-            background-color: #012e66;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 14px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img class="logo" src="https://seeklogo.com/images/A/AFA-logo-6555762D3C-seeklogo.com.png" alt="Logo AFA" />
-        <div class="header-text">
-            <h1>ASOCIACION DE FUTBOL ARGENTINO</h1>
-            <h2>AFAHAX</h2>
-        </div>
-        <img class="logo" src="https://seeklogo.com/images/A/AFA-logo-6555762D3C-seeklogo.com.png" alt="Logo AFA" />
-    </header>
-    <nav>
-        <span>🛡️ Clubes</span>
-        <span>🏆 Liga</span>
-        <span>| Copas</span>
-        <span class="redes">📱 REDES</span>
-    </nav>
-    <main>
-        <h1>¡Bienvenido a la pagina oficial de AFAHAX!</h1>
-        <p class="main-text">
-            Esta liga fue hecha gracias a Yemil<br/>
-            que gracias a el apoyo de personas que<br/>
-            bancaron su proyecto<br/>
-            hoy estamos aca.
-        </p>
-        <p class="info">
-            ¡Podes pasarte por las diferentes categorias! <br/>
-            esto es informativo.
-        </p>
-    </main>
-    <footer>
-        © 2025 AFAHAX - Creado por !Chaeyoung
-    </footer>
-</body>
-</html>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #004294; /* azul fondo principal */
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.header-text {
+    text-align: center;
+    flex-grow: 1;
+    color: #004294;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.header-text h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+nav {
+    background-color: #012e66; /* azul barra nav */
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+
+nav span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav span.redes {
+    color: #64a0cd;
+    font-weight: bolder;
+}
+
+main {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+main h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+main p.main-text {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.4;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+main p.info {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 80px;
+}
+
+footer {
+    background-color: #012e66;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
