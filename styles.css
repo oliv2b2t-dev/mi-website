@@ -1,97 +1,150 @@
+/* Estilos generales */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #004294; /* azul fondo principal */
-    color: white;
+  background-color: #0a3d91;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 10px 20px;
+  background-color: white;
+  color: #0a3d91;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
 }
 
-.header-text {
-    text-align: center;
-    flex-grow: 1;
-    color: #004294;
+/* Logos a izquierda y derecha */
+header .logo {
+  position: absolute;
+  top: 10px;
+  width: 60px;
+  height: auto;
 }
 
-.header-text h1 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 32px;
+header .logo.left {
+  left: 20px;
 }
 
-.header-text h2 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 20px;
+header .logo.right {
+  right: 20px;
 }
 
-.logo {
-    width: 70px;
-    height: auto;
+/* Título principal y subtítulo */
+header h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
+header h2 {
+  margin: 5px 0 0 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* NAVBAR */
 nav {
-    background-color: #012e66; /* azul barra nav */
-    padding: 10px 40px;
-    font-weight: bold;
-    font-size: 18px;
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    align-items: center;
+  background-color: #082b66;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-nav span {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s;
 }
 
-nav span.redes {
-    color: #64a0cd;
-    font-weight: bolder;
+nav a:hover {
+  color: #ffdd00;
 }
 
+/* MAIN */
 main {
-    text-align: center;
-    padding: 40px 20px;
+  flex-grow: 1;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 main h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: bold;
 }
 
-main p.main-text {
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 1.4;
-    max-width: 600px;
-    margin: 0 auto 60px auto;
+main p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
 }
 
-main p.info {
-    font-size: 16px;
-    font-weight: normal;
-    margin-top: 80px;
-}
-
+/* FOOTER */
 footer {
-    background-color: #012e66;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #082b66;
+  color: #ddd;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+  }
+
+  nav {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-weight: 700;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+
+  main p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  header .logo {
+    width: 45px;
+  }
+
+  header .logo.left {
+    left: 10px;
+  }
+
+  header .logo.right {
+    right: 10px;
+  }
 }
