@@ -1,32 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AFAHAX</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AFAHAX - Asociación de Fútbol Argentino</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <!-- FontAwesome opcional -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="escudo.png" alt="Escudo AFAHAX" height="50" />
-        <h1>ASOCIACION DE FUTBOL ARGENTINO</h1>
-    </header>
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="assets/logo-left.png" alt="Escudo AFAHAX" class="logo logo-left" />
+      <h1 class="site-title">ASOCIACION DE FUTBOL ARGENTINO</h1>
+      <img src="assets/logo-right.png" alt="Escudo AFAHAX" class="logo logo-right" />
+    </div>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Clubes</a></li>
-            <li><a href="#">Liga / Copas</a></li>
-            <li><a href="#">Redes</a></li>
-        </ul>
-    </nav>
+  <nav class="main-nav" role="navigation" aria-label="Menú principal">
+    <ul>
+      <li><a href="#clubes">Clubes</a></li>
+      <li><a href="#liga">Liga / Copas</a></li>
+      <li><a href="#redes">Redes</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <h2>¡Bienvenido a la página oficial de AFAHAX!</h2>
-        <p>Esta liga fue hecha gracias a Yemil, que gracias al apoyo de personas que bancaron su proyecto, hoy estamos acá.</p>
-    </main>
+  <main>
+    <section class="hero" id="inicio">
+      <h2>¡Bienvenido a la página oficial de AFAHAX!</h2>
+      <p class="lead">
+        Esta liga fue hecha gracias a Yemil, que gracias al apoyo de personas que bancaron su proyecto, hoy estamos acá.
+      </p>
+      <p class="small-note">¡Podes pasarte por las diferentes categorías! esto es informativo.</p>
+    </section>
+  </main>
 
-    <footer>
-        © 2025 AFAHAX - Creado por !Chaeyoung.
-    </footer>
+  <footer>
+    © 2025 AFAHAX - Creado por !Chaeyoung
+  </footer>
 </body>
 </html>
