@@ -1,88 +1,81 @@
-/* Reseteo y estilos base */
-body {
+/* Reset some default margins and paddings */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* HEADER */
 header {
-    background: white;
+    background-color: white;
     width: 100%;
     display: flex;
     align-items: center;
-    /* Distribuir logo a la izquierda y texto al centro */
-    justify-content: center;
     position: relative;
-    box-sizing: border-box;
+    height: 70px;
     padding: 0 20px;
-    height: 60px;
 }
 
+/* Logo aligned left */
 header img {
+    flex-shrink: 0;
+}
+
+/* Title centered horizontally in the header */
+header h1 {
     position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.header-text {
-    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 1.5rem;
-    color: #002c77;
-    text-align: center;
-    user-select: none;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav {
     background-color: #002c77;
     width: 100%;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
     display: flex;
     justify-content: center;
+    gap: 40px;
+    padding: 10px 0;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1rem;
-    display: inline-block;
-    padding: 12px 0;
-    user-select: none;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #87cefa; /* celeste claro */
+nav a:hover,
+nav a:focus {
+    color: #7ec8e3; /* celeste claro */
 }
 
-/* MAIN */
+/* MAIN CONTENT */
 main {
     background-color: #0a3d91;
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
 }
 
 main h2 {
-    margin-top: 0;
     margin-bottom: 20px;
+    font-size: 1.8rem;
 }
 
 main p {
-    max-width: 560px;
+    font-size: 1.1rem;
+    max-width: 600px;
     margin: 0 auto;
     line-height: 1.5;
-    font-weight: bold;
 }
 
 /* FOOTER */
@@ -90,7 +83,7 @@ footer {
     background-color: #002c77;
     color: white;
     text-align: center;
-    padding: 12px 0;
+    padding: 15px 20px;
     width: 100%;
-    user-select: none;
+    font-size: 0.9rem;
 }
