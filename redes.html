@@ -4,14 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Redes - AFAHAX</title>
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
       <img src="assets/logo-left.png" alt="Escudo AFAHAX" class="logo logo-left" />
-      <h1 class="site-title">AFAHAX - Redes</h1>
+      <h1 class="site-title">REDES</h1>
       <img src="assets/logo-right.png" alt="Escudo AFAHAX" class="logo logo-right" />
     </div>
   </header>
@@ -19,18 +18,28 @@
   <nav class="main-nav">
     <ul>
       <li><a href="clubes.html">Clubes</a></li>
-      <li><a href="liga.html">Liga / Copas</a></li>
+      <li class="has-submenu">
+        <a href="liga.html">Liga / Copas ▾</a>
+        <ul class="submenu">
+          <li><a href="liga/primeradivision.html">Primera División</a></li>
+          <li><a href="liga/segundadivision.html">Segunda División</a></li>
+          <li><a href="liga/libertadores.html">Copa Libertadores</a></li>
+          <li><a href="liga/sudamericana.html">Copa Sudamericana</a></li>
+        </ul>
+      </li>
       <li><a href="redes.html" class="active">Redes</a></li>
     </ul>
   </nav>
 
   <main>
-    <section class="hero">
-      <h2>Nuestras redes</h2>
-      <p class="lead">Seguinos en nuestras redes sociales para enterarte de todas las novedades de la liga.</p>
+    <section>
+      <h2>Nuestras Redes</h2>
+      <p>Encontranos en Discord, Twitter y más plataformas.</p>
     </section>
   </main>
 
-  <footer>© 2025 AFAHAX - Creado por !Chaeyoung</footer>
+  <footer>
+    © 2025 AFAHAX - Creado por !Chaeyoung
+  </footer>
 </body>
 </html>
