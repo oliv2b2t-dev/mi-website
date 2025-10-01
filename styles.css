@@ -6,94 +6,193 @@
 }
 
 body {
+  background-color: #0a3d91;
   font-family: Arial, sans-serif;
-  background-color: #0a3d91; /* Fondo azul oscuro */
   color: white;
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Encabezado */
+/* HEADER */
 header {
   background-color: white;
-  color: #0a3d91;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-header h1 {
-  font-size: 24px;
-  margin: 0;
-  flex: 1 1 100%;
-  text-align: center;
-  font-weight: bold;
-}
-
-header p {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
   width: 100%;
-  margin-top: 5px;
+  max-width: 1200px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
 }
 
-/* Logo */
+/* Logos a izquierda y derecha */
 .logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 60px;
   height: auto;
 }
 
-/* Barra de navegación */
+.logo.left {
+  left: 20px;
+}
+
+.logo.right {
+  right: 20px;
+}
+
+/* Título principal */
+header h1 {
+  color: #0a3d91;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  user-select: none;
+}
+
+/* Subtítulo */
+header .subtitle {
+  color: #0a3d91;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  user-select: none;
+}
+
+/* BARRA DE NAVEGACIÓN */
 nav {
-  background-color: #082b66; /* Azul más oscuro */
+  background-color: #082b66;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
   padding: 10px 0;
+  box-sizing: border-box;
+  margin-top: 5px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  gap: 40px;
 }
 
-nav ul li {
-  display: inline;
+nav li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-nav ul li a {
-  text-decoration: none;
+nav a {
   color: white;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+  user-select: none;
 }
 
-nav ul li a:hover {
-  color: #ffdd00; /* Amarillo al pasar el mouse */
+nav a:hover,
+nav a:focus {
+  color: #ffdd00;
+  outline: none;
 }
 
-/* Contenido principal */
+/* BLOQUE CENTRAL */
 main {
-  padding: 40px 20px;
+  max-width: 900px;
+  width: 90%;
+  margin: 30px auto 50px;
+  text-align: center;
+  flex-grow: 1;
 }
 
 main h2 {
-  font-size: 28px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
   margin-bottom: 20px;
-  font-weight: bold;
+  user-select: none;
 }
 
 main p {
-  font-size: 18px;
-  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: white;
+  user-select: text;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   background-color: #082b66;
-  padding: 15px 10px;
-  font-size: 14px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 15px 20px;
+  text-align: center;
   color: #ddd;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+/* Íconos en nav: tamaño y color */
+nav a i {
+  font-size: 1.2rem;
+  /* inherit color from link */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header .subtitle {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    gap: 25px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  main h2 {
+    font-size: 1.6rem;
+  }
+
+  main p {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav ul {
+    gap: 15px;
+  }
+
+  nav {
+    padding: 8px 0;
+  }
+
+  main {
+    width: 95%;
+    margin: 20px auto 40px;
+  }
 }
