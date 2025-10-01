@@ -3,43 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Liga / Copas - AFAHAX</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Liga / Copas — AFAHAX</title>
+
+  <!-- CSS global (raíz) -->
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- CSS específico de la sección Liga -->
+  <link rel="stylesheet" href="liga.css" />
 </head>
 <body>
+  <!-- Header (igual look) -->
   <header class="site-header">
     <div class="header-inner">
-      <img src="assets/logo-left.png" alt="Escudo AFAHAX" class="logo logo-left" />
-      <h1 class="site-title">LIGA Y COPAS</h1>
-      <img src="assets/logo-right.png" alt="Escudo AFAHAX" class="logo logo-right" />
+      <a href="../"><img src="../assets/logo-left.png" alt="Escudo AFAHAX" class="logo logo-left" /></a>
+      <h1 class="site-title">LIGA / COPAS</h1>
+      <a href="../"><img src="../assets/logo-right.png" alt="Escudo AFAHAX" class="logo logo-right" /></a>
     </div>
   </header>
 
-  <nav class="main-nav">
+  <!-- Nav superior simple -->
+  <nav class="main-nav" role="navigation" aria-label="Menú principal">
     <ul>
-      <li><a href="clubes.html">Clubes</a></li>
-      <li class="has-submenu">
-        <a href="liga.html" class="active">Liga / Copas ▾</a>
-        <ul class="submenu">
-          <li><a href="liga/primeradivision.html">Primera División</a></li>
-          <li><a href="liga/segundadivision.html">Segunda División</a></li>
-          <li><a href="liga/libertadores.html">Copa Libertadores</a></li>
-          <li><a href="liga/sudamericana.html">Copa Sudamericana</a></li>
-        </ul>
-      </li>
-      <li><a href="redes.html">Redes</a></li>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../clubes.html">Clubes</a></li>
+      <li><a href="./" class="active">Liga / Copas</a></li>
+      <li><a href="../redes.html">Redes</a></li>
     </ul>
   </nav>
 
-  <main>
-    <section>
-      <h2>Bienvenido a la sección Liga y Copas</h2>
-      <p>Acá vas a encontrar información sobre torneos, divisiones y copas.</p>
-    </section>
-  </main>
+  <!-- Wrap: sidebar izquierda + main a la derecha -->
+  <div class="content-wrapper">
+    <aside class="sidebar" aria-label="Navegación de temporadas">
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <button class="accordion" aria-expanded="false">Temporada 1</button>
+            <ul class="submenu">
+              <li><a href="primeradivision/">Primera División</a></li>
+              <li><a href="apertura/">Apertura</a></li>
+              <li><a href="clausura/">Clausura</a></li>
+              <li><a href="sudamericana/">Sudamericana</a></li>
+              <li><a href="libertadores/">Libertadores</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <button class="accordion" aria-expanded="false">Temporada 2</button>
+            <ul class="submenu">
+              <li><a href="primeradivision/">Primera División</a></li>
+              <li><a href="apertura/">Apertura</a></li>
+              <li><a href="clausura/">Clausura</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="liga-main">
+      <section class="hero">
+        <h2>Temporada 2 en curso!</h2>
+        <p class="lead">¡Revisa las categorías de la izquierda para ver las temporadas!</p>
+      </section>
+    </main>
+  </div>
 
   <footer>
     © 2025 AFAHAX - Creado por !Chaeyoung
   </footer>
+
+  <script src="liga.js" defer></script>
 </body>
 </html>
