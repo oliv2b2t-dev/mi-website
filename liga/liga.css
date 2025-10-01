@@ -1,1 +1,105 @@
+/* variables de layout para calcular top/bottom */
+:root{
+  --header-h: 88px;  /* si cambias header, ajustá este valor */
+  --nav-h: 44px;
+  --footer-h: 44px;
+}
 
+/* Wrapper básica: main a la derecha */
+.content-wrapper {
+  display: block; /* usamos sidebar fijo, main con margen */
+}
+
+/* SIDEBAR: fijo entre header+nav y footer */
+.sidebar {
+  position: fixed;
+  top: calc(var(--header-h) + var(--nav_h, var(--nav-h)));
+  bottom: var(--footer-h);
+  left: 0;
+  width: 220px;
+  padding: 20px 16px;
+  background: var(--blue-dark); /* usa la variable del styles.css global */
+  color: var(--text-light);
+  overflow-y: auto;
+  z-index: 5;
+}
+
+/* si las variables globales no existen, defino fallback */
+:root {
+  --blue-dark: #002c77;
+  --text-light: #fff;
+}
+
+/* Main: margin-left para dejar el espacio de la sidebar */
+.liga-main {
+  margin-left: 220px;
+  min-height: calc(100vh - var(--header-h) - var(--nav-h) - var(--footer-h));
+  padding: 40px 48px;
+  background: var(--blue-main); /* asume var definida en styles.css global */
+}
+
+/* Acordeón */
+.sidebar-nav ul { list-style: none; padding: 0; margin: 0; }
+.sidebar-nav li { margin-bottom: 14px; }
+
+.accordion{
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-weight: 800;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* icono chevrón */
+.accordion::after{
+  content: "▸";
+  transform: rotate(0deg);
+  transition: transform .18s ease;
+  font-size: 14px;
+  opacity: 0.9;
+}
+.accordion[aria-expanded="true"]::after{
+  transform: rotate(90deg);
+}
+
+/* submenu hidden por defecto */
+.submenu{
+  display: none;
+  padding-left: 12px;
+  margin-top: 8px;
+}
+.submenu li { margin: 6px 0; }
+.submenu a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 4px 6px;
+}
+.submenu a:hover{
+  color: var(--accent, #9bd1ff);
+}
+
+/* simple responsive: en pantallas pequeñas, sidebar pasa arriba (scrollable) */
+@media (max-width: 900px) {
+  .sidebar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 12px;
+  }
+  .liga-main {
+    margin-left: 0;
+    padding: 24px;
+  }
+}
